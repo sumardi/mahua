@@ -46,4 +46,11 @@ function pr($var) {
 	echo "<pre>"; print_r($var); echo "</pre>";
 }
 
+/*** The registry is an object where site wide variables can be stored without the use of globals. ***/
+$registry = new Registry();
+
+/*** set the dispatcher ***/
+$registry->dispatcher = new Dispatch($registry);
+$registry->dispatcher->loader();
+
 ?>

@@ -64,7 +64,7 @@ class Model
 		Model::$connection = mysql_connect(DB_HOST, DB_USER, DB_PASSWD) or die(mysql_error());
 		$this->db = mysql_select_db(DB_NAME) or die(mysql_error());
 		
-		$this->table = if(!empty($this->name)) ? $this->name : $this->registry->dispatcher->model;
+		$this->table = !empty($this->name) ? $this->name : $this->registry->dispatcher->model;
 	}
 	
 	/**
@@ -73,7 +73,7 @@ class Model
 	 * @return void
 	 */
 	public function __destruct() {
-		mysql_close(Model::$connection);
+//		mysql_close(Model::$connection);
 	}
 }
 	

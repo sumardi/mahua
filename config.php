@@ -26,10 +26,10 @@ define("DB_USER", "root");
 define("DB_PASSWD", "");
 
 /*** database name ***/
-define("DB_NAME", "training");
+define("DB_NAME", "test");
 
 /*** virtual path to the system (without ending slash) ***/
-define("URL", "http://localhost/framework");
+define("URL", "http://localhost/mahua");
 
 /*** default route ***/
 define("DEFAULT_ROUTE", "test/index");
